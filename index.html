@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List API — второе задание</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>ToDo List API</h1>
+
+    <form id="todoForm" class="add-form">
+      <input id="todoInput" type="text" placeholder="Новая задача" autocomplete="off">
+      <button id="addButton" type="submit">Добавить</button>
+    </form>
+
+    <div id="status" class="status" aria-live="polite">Загружаем задачи...</div>
+
+    <div class="toolbar">
+      <input id="searchInput" type="search" placeholder="Поиск по задачам" autocomplete="off">
+      <div class="filters" role="group" aria-label="Фильтр задач">
+        <button class="filter active" data-filter="all" type="button">Все</button>
+        <button class="filter" data-filter="active" type="button">Активные</button>
+        <button class="filter" data-filter="completed" type="button">Выполненные</button>
+      </div>
+    </div>
+
+    <div class="counters">
+      <span>Всего: <strong id="totalCount">0</strong></span>
+      <span>Активных: <strong id="activeCount">0</strong></span>
+      <span>Выполненных: <strong id="completedCount">0</strong></span>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div class="bottom-row">
+      <button id="clearCompleted" type="button">Очистить выполненные</button>
+    </div>
+  </main>
+
+  <script src="index(1).js" defer></script>
+</body>
+</html>
