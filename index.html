@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Todo List</h1>
+
+    <form id="add-form" class="row">
+      <input id="title" type="text" placeholder="Что нужно сделать?" autocomplete="off">
+      <button id="add-btn" type="submit">Добавить</button>
+    </form>
+
+    <div class="row">
+      <input id="search" type="text" placeholder="Поиск по тексту">
+    </div>
+
+    <div class="row filters">
+      <button data-filter="all" class="active">Все</button>
+      <button data-filter="active">Активные</button>
+      <button data-filter="done">Выполненные</button>
+      <button id="clear-done">Удалить выполненные</button>
+    </div>
+
+    <p id="status" class="status"></p>
+    <ul id="list"></ul>
+    <p id="stats" class="stats"></p>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
